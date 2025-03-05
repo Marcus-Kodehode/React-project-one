@@ -1,0 +1,37 @@
+/* 📌 Footer-styling */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #543310;
+    color: white;
+    padding: 15px 40px;
+    font-size: 1rem;
+    margin-top: 40px;
+}
+
+/* 📌 Kontaktinfo */
+.contactInfo p {
+    margin: 5px 0;
+}
+
+/* 📌 Footer-logo container */
+.logoFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 📌 Footer-logo */
+.footerLogo {
+    width: 50px; /* 📌 Juster størrelsen */
+    height: auto;
+    margin-bottom: 5px;
+    border-radius: 50%;
+}
+
+/* 📌 Trademark */
+.trademark {
+    font-size: 0.9rem;
+    text-align: right;
+}

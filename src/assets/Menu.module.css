@@ -1,0 +1,77 @@
+/* 📌 Styling for hovedtittelen */
+.menuTitle {
+    font-size: 2.5rem; /* 📌 Stor og elegant fontstørrelse */
+    font-family: 'Playfair Display', serif; /* 📌 Elegant serif-font */
+    color: #5E503F; /* 📌 Dyp brun for eksklusivt uttrykk */
+    font-weight: bold; /* 📌 Fet skrift */
+    text-transform: uppercase;
+    text-align: center; /* 📌 Sentrerer teksten */
+    margin-bottom: 20px; /* 📌 Gir litt luft under tittelen */
+}
+
+/* 📌 Container for hele menyen */
+.menuContainer {
+    text-align: center;
+    padding: 40px;
+    background: #F8F5F2; /* 📌 Lys beige bakgrunn */
+    border-radius: 10px;
+}
+
+/* 📌 Styling for kategorititler (Forretter, Hovedretter, Desserter) */
+.categoryTitle {
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif; /* 📌 Elegant serif-font */
+    color: #5E503F; /* 📌 Dyp brun for eksklusivt uttrykk */
+    text-transform: uppercase;
+    border-bottom: 3px solid #C49A6C; /* 📌 Elegant gullbrun linje */
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+/* 📌 Grid-layout med 2 kolonner (2 retter per rad) */
+.dishGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 📌 2 kolonner per rad */
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* 📌 Responsiv tilpasning - hvis skjermen er liten, vises kun 1 per rad */
+@media (max-width: 768px) {
+    .dishGrid {
+        grid-template-columns: repeat(1, 1fr); /* 📌 1 kolonne på små skjermer */
+    }
+}
+/* 📌 Wrapper for filterknapper */
+.filterButtons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* 📌 Stil for hver knapp */
+.filterButtons button {
+    background: #C49A6C; /* Gullbrun */
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 📌 Hover-effekt */
+.filterButtons button:hover {
+    background: #A67C52; /* Mørkere gullbrun */
+}
+
+/* 📌 Aktiv knapp */
+.activeFilter {
+    background: #543310; /* Dyp brun */
+    font-weight: bold;
+}

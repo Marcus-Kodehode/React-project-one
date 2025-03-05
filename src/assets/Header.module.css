@@ -1,0 +1,61 @@
+/* 📌 Header-styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #543310;
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 📌 Logo-container */
+.logoContainer {
+    display: flex;
+    align-items: center;
+}
+
+/* 📌 Logo-bilde */
+.logo {
+    width: 50px; /* 📌 Tilpass størrelsen */
+    height: auto;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+/* 📌 Tekst ved siden av logoen */
+.logoText {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* 📌 Navigasjonsmeny */
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+/* 📌 Standard knappe-styling */
+.nav button {
+    background-color: #C49A6C;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer; /* 📌 Standard peker */
+    transition: background 0.3s ease-in-out;
+}
+
+/* 📌 Hover-effekt */
+.nav button:hover {
+    background-color: #A07850;
+}
+
+/* 📌 Etter første klikk skal knappen ha ventekursor */
+.loadingCursor {
+    cursor: wait !important;
+}

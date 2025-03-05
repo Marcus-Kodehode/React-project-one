@@ -1,0 +1,49 @@
+/* 📌 Importerer fontene */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap');
+
+/* 📌 Generelle stiler */
+body {
+    background-color: #F7F3EC; /* Myk kremhvit */
+    font-family: 'Source Sans Pro', sans-serif; /* Standard brødtekst */
+    color: #2C2A28; /* Mørk brungrå tekst */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* 📌 Hovedcontainer */
+.app {
+    max-width: 1100px;
+    padding: 40px;
+    text-align: center;
+    background: #FDFBF7; /* Varm hvit bakgrunn */
+    border-radius: 12px;
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* 📌 Importerer den nye fonten */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap');
+
+/* 📌 Hovedtittel-styling */
+.mainTitle {
+    font-family: "Cormorant Garamond", serif; /* 📌 Elegant og klassisk font */
+    font-size: 3.5rem; /* 📌 Gjør tittelen litt større */
+    color: #543310; /* 📌 Dyp brunfarge */
+    text-align: center; /* 📌 Sentrerer tittelen */
+    text-transform: uppercase; /* 📌 Store bokstaver for en luksuriøs følelse */
+    font-weight: 700; /* 📌 Gjør den litt kraftigere */
+    margin-bottom: 20px; /* 📌 Luft under tittelen */
+    position: relative;
+}
+
+/* 📌 Dekorativ linje under tittelen */
+.mainTitle::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: #C49A6C; /* 📌 Gullbrun linje */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}

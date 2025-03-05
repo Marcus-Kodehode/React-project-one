@@ -1,0 +1,78 @@
+/* 📌 Hovedcontainer for hver enkelt rett */
+.dishCard {
+    display: flex;
+    align-items: center;
+    background: #F8F5F2; /* 📌 Lyst beige bakgrunn */
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* 📌 Legger til en lett zoom-effekt når musen er over */
+  .dishCard:hover {
+    transform: scale(1.02);
+    background: #EDE0D4; /* 📌 Varme jordtoner ved hover */
+  }
+  
+  /* 📌 Bildet av retten */
+  .dishImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 20px;
+    object-fit: cover;
+    border: 3px solid #C49A6C; /* 📌 Gullbrun kant */
+  }
+  
+  /* 📌 Container for tekst-informasjonen om retten */
+  .dishInfo {
+    flex: 1;
+  }
+  
+  /* 📌 Styling for navnet på retten */
+  .dishName {
+    font-family: "Playfair Display", serif; /* 📌 Elegant serif-font */
+    font-size: 1.6rem;
+    color: #5E503F; /* 📌 Dyp brun farge */
+    margin: 0 0 5px 0;
+  }
+  
+  /* 📌 Styling for beskrivelsen av retten */
+  .dishDescription {
+    font-family: "Merriweather", serif; /* 📌 Støttefont for brødtekst */
+    font-size: 1rem;
+    color: #403D39; /* 📌 Mørk dempet brun */
+    margin: 5px 0;
+  }
+  
+  /* 📌 Styling for pris og allergener */
+  .dishPrice, .dishAllergens {
+    font-size: 1rem;
+    color: #3D3D3D; /* 📌 Mykere mørk grå */
+    font-weight: bold;
+  }
+/* 📌 Favoritt-knapp */
+.favoriteButton {
+    background: none;
+    border: 2px solid #C49A6C; /* Gullbrun farge */
+    color: #543310;
+    font-size: 1rem;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.favoriteButton:hover {
+    background: #C49A6C;
+    color: white;
+}
+
+/* 📌 Endrer farge når retten er favoritt */
+.favoriteButton.active {
+    background: #C49A6C;
+    color: white;
+    font-weight: bold;
+}
