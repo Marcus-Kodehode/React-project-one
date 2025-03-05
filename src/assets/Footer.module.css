@@ -1,4 +1,4 @@
-/* 📌 Footer-styling */
+/* 📌 Footer */
 .footer {
     display: flex;
     justify-content: space-between;
@@ -15,7 +15,7 @@
     margin: 5px 0;
 }
 
-/* 📌 Footer-logo container */
+/* 📌 Footer-logo */
 .logoFooter {
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@
 
 /* 📌 Footer-logo */
 .footerLogo {
-    width: 50px; /* 📌 Juster størrelsen */
+    width: 50px;
     height: auto;
     margin-bottom: 5px;
     border-radius: 50%;
@@ -35,3 +35,4 @@
     font-size: 0.9rem;
     text-align: right;
 }
+

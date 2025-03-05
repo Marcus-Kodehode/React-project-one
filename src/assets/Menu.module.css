@@ -1,60 +1,79 @@
 /* 📌 Styling for hovedtittelen */
 .menuTitle {
-    font-size: 2.5rem; /* 📌 Stor og elegant fontstørrelse */
-    font-family: 'Playfair Display', serif; /* 📌 Elegant serif-font */
-    color: #5E503F; /* 📌 Dyp brun for eksklusivt uttrykk */
-    font-weight: bold; /* 📌 Fet skrift */
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #5E503F;
+    font-weight: bold;
     text-transform: uppercase;
-    text-align: center; /* 📌 Sentrerer teksten */
-    margin-bottom: 20px; /* 📌 Gir litt luft under tittelen */
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* 📌 Container for hele menyen */
+/* 📌 Hovedcontainer for menyen */
 .menuContainer {
     text-align: center;
     padding: 40px;
-    background: #F8F5F2; /* 📌 Lys beige bakgrunn */
+    background: #F5F1EB;
     border-radius: 10px;
 }
 
-/* 📌 Styling for kategorititler (Forretter, Hovedretter, Desserter) */
+/* 📌 Kategorititler */
 .categoryTitle {
     font-size: 2rem;
-    font-family: 'Playfair Display', serif; /* 📌 Elegant serif-font */
-    color: #5E503F; /* 📌 Dyp brun for eksklusivt uttrykk */
+    font-family: 'Playfair Display', serif;
+    color: #543310;
     text-transform: uppercase;
-    border-bottom: 3px solid #C49A6C; /* 📌 Elegant gullbrun linje */
+    border-bottom: 3px solid #C49A6C;
     display: inline-block;
     padding-bottom: 5px;
     margin-top: 30px;
 }
 
-/* 📌 Grid-layout med 2 kolonner (2 retter per rad) */
+/* 📌 Grid-layout (desktop) */
 .dishGrid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 📌 2 kolonner per rad */
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     justify-content: center;
     margin-top: 20px;
 }
 
-/* 📌 Responsiv tilpasning - hvis skjermen er liten, vises kun 1 per rad */
-@media (max-width: 768px) {
+/* 📌 Tilpasning for nettbrett */
+@media (max-width: 1024px) {
     .dishGrid {
-        grid-template-columns: repeat(1, 1fr); /* 📌 1 kolonne på små skjermer */
+        grid-template-columns: repeat(1, 1fr); /* 1 rett per rad */
+        gap: 15px;
     }
 }
-/* 📌 Wrapper for filterknapper */
+
+/* 📌 Tilpasning for mobil */
+@media (max-width: 768px) {
+    .menuContainer {
+        padding: 10px;
+    }
+
+    .categoryTitle {
+        font-size: 1.5rem;
+    }
+
+    .dishGrid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+}
+
+/* 📌 Filterknapper */
 .filterButtons {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    flex-wrap: wrap; /* 📌 Gjør knappene mer fleksible */
+    gap: 10px;
     margin-bottom: 20px;
 }
 
-/* 📌 Stil for hver knapp */
+/* 📌 Knappestil */
 .filterButtons button {
-    background: #C49A6C; /* Gullbrun */
+    background: #C49A6C;
     color: white;
     font-family: 'Playfair Display', serif;
     font-size: 1rem;
@@ -65,13 +84,14 @@
     transition: all 0.3s ease-in-out;
 }
 
-/* 📌 Hover-effekt */
-.filterButtons button:hover {
-    background: #A67C52; /* Mørkere gullbrun */
+/* 📌 Responsiv justering for knapper */
+@media (max-width: 600px) {
+    .filterButtons {
+        flex-direction: column;
+    }
+
+    .filterButtons button {
+        width: 100%;
+    }
 }
 
-/* 📌 Aktiv knapp */
-.activeFilter {
-    background: #543310; /* Dyp brun */
-    font-weight: bold;
-}
