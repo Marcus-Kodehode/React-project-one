@@ -11,21 +11,26 @@ function Header() {
     mystery: 0,
   });
 
+  const playSound = (soundFile) => {
+    const audio = new Audio(soundFile);
+
+    if (soundFile.includes("giveup.mp3")) {
+      audio.volume = 1.0; // 📌 Setter volumet til maks for 'GiveUp'
+    } else {
+      audio.volume = 0.5; // 📌 Standard volum for de andre lydene
+    }
+
+    audio.play();
+  };
+
   const handleClick = (button) => {
     setClickCounts((prev) => {
       const newCount = prev[button] + 1;
-      const audio = new Audio(
-        button === "about" ? failSound :
-        button === "contact" ? shadowSound :
-        giveUpSound
-      );
 
-      if (newCount % 2 === 0) {
-        // Spiller av lyd kun ved andre klikk (2, 4, 6 osv.)
-        if (button === "mystery") {
-          audio.loop = true; // Gjør at GiveUp spilles på repeat
-        }
-        audio.play();
+      if (newCount % 2 === 0) { // 📌 Spill lyd kun på annenhver klikk
+        if (button === "about") playSound(failSound);
+        if (button === "contact") playSound(shadowSound);
+        if (button === "mystery") playSound(giveUpSound);
       }
 
       return { ...prev, [button]: newCount };

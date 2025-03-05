@@ -39,6 +39,12 @@
       text-align: center;
       padding: 15px;
   }
+/* 📌 Liten "løft" når man hover over en rett */
+.dishCard:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
 
   .dishImage {
       width: 80px;
@@ -108,4 +114,33 @@
   border-color: #b22222;
   font-weight: bold;
   transition: all 0.3s ease-in-out; /* 📌 Smooth overgang */
+}
+/* 📌 Favoritt-pop-up */
+.popup {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #C49A6C; /* Gullbrun */
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeInOut 2s ease-in-out;
+}
+
+/* 📌 Favoritt-styling */
+.favoriteDish {
+  border: 3px solid #C49A6C; /* Gullbrun ramme for favoritter */
+  transition: border 0.3s ease-in-out;
+}
+
+/* 📌 Fade inn/ut animasjon */
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  20% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
 }

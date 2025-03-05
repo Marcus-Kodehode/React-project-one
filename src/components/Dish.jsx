@@ -14,18 +14,12 @@ const allergenIcons = {
 
 function Dish({ id, title, price, ingredients, allergens, image }) {
   const [isFavorite, setIsFavorite] = useState(false);
+  const [showPopup, setShowPopup] = useState(false); // 📌 Styrer popup-vinduet
 
   // 📌 Henter lagrede favoritter fra localStorage ved lasting av siden
   useEffect(() => {
-    let savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
-
-    // 🔎 Debug: Sjekker hva som faktisk er lagret i localStorage
-    console.log("Hentet fra localStorage:", savedFavorites);
-
-    // 📌 Sikrer at vi jobber med en gyldig liste
-    if (Array.isArray(savedFavorites) && savedFavorites.includes(id)) {
-      setIsFavorite(true);
-    }
+    const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    setIsFavorite(savedFavorites.includes(id)); 
   }, [id]);
 
   // 📌 Funksjon for å legge til/fjerne favoritter
@@ -45,15 +39,15 @@ function Dish({ id, title, price, ingredients, allergens, image }) {
 
     // 📌 Lagre oppdatert favoritt-liste i localStorage
     localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-
-    // 🔎 Debug: Logger oppdatert liste for å verifisere
-    console.log("Oppdaterte favoritter:", updatedFavorites);
-
     setIsFavorite(!isFavorite);
+
+    // 📌 Viser pop-up når favoritt legges til/fjernes
+    setShowPopup(true);
+    setTimeout(() => setShowPopup(false), 2000); // 📌 Skjuler pop-up etter 2 sekunder
   };
 
   return (
-    <div className={`${styles.dishCard} ${isFavorite ? styles.favorite : ""}`}>
+    <div className={`${styles.dishCard} ${isFavorite ? styles.favoriteDish : ""}`}>
       <img src={image} alt={title} className={styles.dishImage} />
       <div className={styles.dishInfo}>
         <h3 className={styles.dishName}>{title}</h3>
@@ -73,6 +67,13 @@ function Dish({ id, title, price, ingredients, allergens, image }) {
         >
           {isFavorite ? "❤️ Remove Favorite" : "🤍 Add Favorite"}
         </button>
+
+        {/* 📌 Pop-up melding for favoritt */}
+        {showPopup && (
+          <div className={styles.popup}>
+            {isFavorite ? "Added to Favorites! ❤️" : "Removed from Favorites! 🤍"}
+          </div>
+        )}
       </div>
     </div>
   );

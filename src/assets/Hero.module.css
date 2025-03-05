@@ -1,0 +1,115 @@
+/* 📌 Hero-seksjon (bakgrunnsbilde) */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* 📌 Justerer høyden */
+    background: url("/images/hoved2.webp") center/cover no-repeat; /* 📌 Bakgrunnsbilde */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* 📌 Overlegg for bedre lesbarhet */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* 📌 Mørkt gjennomsiktig filter */
+}
+
+/* 📌 Tekstinnhold */
+.heroContent {
+    max-width: 800px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6); /* 📌 Bedre kontrast for lesbarhet */
+    padding: 30px;
+    border-radius: 15px;
+    line-height: 1.7;
+}
+
+/* 📌 Bedre knappedesign */
+.heroButton {
+    background-color: #C49A6C;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.heroButton:hover {
+    background-color: #A67C52;
+    transform: translateY(-2px);
+}
+
+
+/* 📌 Responsiv tilpasning */
+@media (max-width: 768px) {
+    .heroContent {
+        max-width: 90%;
+        padding: 20px;
+    }
+}
+
+
+/* 📌 Tittel */
+.heroContent h1 {
+    font-size: 3rem;
+    font-family: "Playfair Display", serif;
+    margin-bottom: 10px;
+}
+
+/* 📌 Beskrivelse */
+.heroContent p {
+    font-size: 1.2rem;
+    font-family: "Merriweather", serif;
+    line-height: 1.6;
+}
+
+/* 📌 CTA-knapp */
+.ctaButton {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-family: "Playfair Display", serif;
+    color: white;
+    background: #C49A6C; /* 📌 Gullbrun */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* 📌 Hover-effekt */
+.ctaButton:hover {
+    background: #A67C52; /* 📌 Mørkere gullbrun */
+    transform: scale(1.05);
+}
+
+/* 📌 Mobilvennlig justering */
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+    }
+    .heroContent h1 {
+        font-size: 2rem;
+    }
+    .heroContent p {
+        font-size: 1rem;
+    }
+    .ctaButton {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}

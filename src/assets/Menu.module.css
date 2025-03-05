@@ -114,3 +114,23 @@
         width: 100%;
     }
 }
+/* 📌 Fade-in effekt når siden lastes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.menuContainer {
+    animation: fadeIn 0.8s ease-in-out; /* 📌 Gir en myk fade-in effekt */
+}
+/* 📌 Trykk-animasjon */
+button:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease-in-out;
+}
