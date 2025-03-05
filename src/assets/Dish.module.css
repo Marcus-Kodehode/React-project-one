@@ -2,99 +2,46 @@
 .dishCard {
   display: flex;
   align-items: center;
-  background: #ffffff; /* Hvit bakgrunn */
+  background: #ffffff;
   padding: 20px;
   margin: 15px 0;
-  border-radius: 12px; /* Runde kanter */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Myk skygge */
-  transition: transform 0.2s ease-in-out;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out; /* 📌 Smooth overgang */
 }
 
-/* 📌 Zoom-effekt når man hovrer over en rett */
+/* 📌 Liten zoom-effekt ved hover */
 .dishCard:hover {
   transform: scale(1.02);
-  background: #f3f1ed; /* Lett beige for interaktiv effekt */
+  background: #f3f1ed;
 }
 
-/* 📌 Favoritt-styling - Retter som er favoritter får en rød border */
-.favorite {
-  border: 3px solid #B22222; /* Rød kant */
-  box-shadow: 0px 4px 12px rgba(178, 34, 34, 0.3); /* Liten rød glød */
+/* 📌 Når retten er favoritt - smooth overgang på rød border */
+.dishCard.favorite {
+  border: 3px solid #b22222; /* 📌 Rød kant */
+  transition: all 0.4s ease-in-out; /* 📌 Smooth overgang */
 }
 
 /* 📌 Bildet av retten */
 .dishImage {
-  width: 100px; /* Fast bredde */
-  height: 100px; /* Fast høyde */
-  border-radius: 10px; /* Runde kanter */
-  margin-right: 20px; /* Avstand mellom bilde og tekst */
-  object-fit: cover; /* Sørger for at bildet fyller rammen */
-  border: 3px solid #b0a084; /* Gull-brun kant */
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin-right: 20px;
+  object-fit: cover;
+  border: 3px solid #b0a084;
 }
 
-/* 📌 Tekstcontainer for retten */
-.dishInfo {
-  flex: 1; /* Fyller all tilgjengelig plass */
-}
-
-/* 📌 Navn på retten */
-.dishName {
-  font-family: "Playfair Display", serif; /* Elegant font */
-  font-size: 1.6rem;
-  color: #5E503F; /* Dyp brun farge */
-  margin: 0 0 5px 0;
-}
-
-/* 📌 Beskrivelse av retten */
-.dishDescription {
-  font-family: "Merriweather", serif; /* Støttefont for brødtekst */
-  font-size: 1rem;
-  color: #403D39; /* Mørk dempet brun */
-  margin: 5px 0;
-}
-
-/* 📌 Pris og allergener */
-.dishPrice, .dishAllergens {
-  font-size: 1rem;
-  color: #3D3D3D; /* Mykere mørk grå */
-  font-weight: bold;
-}
-
-/* 📌 Favoritt-knapp */
-.favoriteButton {
-  background: none;
-  border: 2px solid #C49A6C; /* Gullbrun farge */
-  color: #543310;
-  font-size: 1rem;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-/* 📌 Favoritt-knapp: Hover-effekt */
-.favoriteButton:hover {
-  background: #C49A6C;
-  color: white;
-}
-
-/* 📌 Favoritt-knapp: Aktivert tilstand */
-.favoriteButton.active {
-  background: #B22222; /* Rød bakgrunn */
-  color: white;
-  font-weight: bold;
-}
-
-/* 📌 Responsiv tilpasning for mobil */
+/* 📌 Tilpasning for mobil */
 @media (max-width: 768px) {
   .dishCard {
-      flex-direction: column; /* Setter bildet over teksten */
+      flex-direction: column;
       text-align: center;
       padding: 15px;
   }
 
   .dishImage {
-      width: 80px; /* Gjør bildet litt mindre */
+      width: 80px;
       height: 80px;
       margin-bottom: 10px;
   }
@@ -106,4 +53,59 @@
   .dishPrice, .dishIngredients, .dishAllergens {
       font-size: 0.9rem;
   }
+} 
+
+/* 📌 Container for tekst-informasjonen om retten */
+.dishInfo {
+  flex: 1;
+}
+
+/* 📌 Styling for navnet på retten */
+.dishName {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  color: #5E503F;
+  margin: 0 0 5px 0;
+}
+
+/* 📌 Styling for beskrivelsen av retten */
+.dishDescription {
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+  color: #403D39;
+  margin: 5px 0;
+}
+
+/* 📌 Styling for pris og allergener */
+.dishPrice, .dishAllergens {
+  font-size: 1rem;
+  color: #3D3D3D;
+  font-weight: bold;
+}
+
+/* 📌 Favoritt-knapp - smooth overgang */
+.favoriteButton {
+  background: none;
+  border: 2px solid #C49A6C;
+  color: #543310;
+  font-size: 1rem;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out; /* 📌 Smooth overgang */
+}
+
+/* 📌 Hover-effekt */
+.favoriteButton:hover {
+  background: #C49A6C;
+  color: white;
+}
+
+/* 📌 Endrer farge når retten er favoritt */
+.favoriteButton.active {
+  background: #b22222;
+  color: white;
+  border-color: #b22222;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out; /* 📌 Smooth overgang */
 }
