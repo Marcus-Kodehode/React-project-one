@@ -1,72 +1,94 @@
-/* 📌 Modal bakgrunn (overlay) */
+/* 📌 Modal overlay (bakgrunn) */
 .modalOverlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* 📌 Mørk bakgrunn */
+    background: rgba(0, 0, 0, 0.6); /* 📌 Mørkere bakgrunn for bedre kontrast */
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1000;
 }
 
-/* 📌 Selve modal-boksen */
+/* 📌 Selve popup-boksen */
 .modalContent {
-    background: white;
+    background: #fdfdfd;
     padding: 20px;
-    border-radius: 10px;
+    width: 380px; /* 📌 Smalere bredde for mer kompakt design */
+    max-width: 90%;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 400px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    font-family: 'Playfair Display', serif;
 }
 
-/* 📌 Input-felt for navn */
+/* 📌 Tittel */
+.modalContent h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #543310;
+    margin-bottom: 10px;
+}
+
+/* 📌 Tekst */
+.modalContent p {
+    font-size: 1rem;
+    color: #403D39;
+    margin-bottom: 15px;
+}
+
+/* 📌 Inputfelt */
 .inputField {
     width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 2px solid #c49a6c;
+    padding: 8px;
+    border: 1px solid #C49A6C;
     border-radius: 5px;
     font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-/* 📌 Bekreft-knappen */
-.confirmButton {
-    background: #c49a6c;
+/* 📌 Knapp */
+.confirmButton, .closeButton {
+    background: #C49A6C;
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 1rem;
-    transition: background 0.3s ease;
-}
-
-.confirmButton:hover {
-    background: #a07850;
-}
-
-/* 📌 Lukk-knappen */
-.closeButton {
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
     margin-top: 10px;
-    background: #543310;
+}
+
+.confirmButton:hover, .closeButton:hover {
+    background: #A67C52;
+}
+
+/* 📌 Bilde */
+.specialImage {
+    width: 100%;
+    max-width: 250px; /* 📌 Gjør bildet mindre */
+    border-radius: 8px;
+    margin-top: 15px;
+}
+.closeButton {
+    display: block;
+    margin: 15px auto 0 auto; /* 📌 Sentrerer knappen */
+    padding: 10px 20px;
+    background-color: #A67C52;
     color: white;
-    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
+    transition: background 0.3s ease-in-out;
 }
 
 .closeButton:hover {
-    background: #402408;
-}
-
-/* 📌 Større bilde for spesialbeskjed */
-.specialImage {
-    width: 100%;
-    margin-top: 10px;
-    border-radius: 5px;
+    background-color: #543310;
 }
