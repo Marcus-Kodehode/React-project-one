@@ -2,68 +2,99 @@
 .dishCard {
   display: flex;
   align-items: center;
-  background: #ffffff;
+  background: #ffffff; /* Hvit bakgrunn */
   padding: 20px;
   margin: 15px 0;
-  border-radius: 12px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px; /* Runde kanter */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Myk skygge */
   transition: transform 0.2s ease-in-out;
 }
 
-/* 📌 Liten zoom-effekt */
+/* 📌 Zoom-effekt når man hovrer over en rett */
 .dishCard:hover {
   transform: scale(1.02);
-  background: #f3f1ed;
+  background: #f3f1ed; /* Lett beige for interaktiv effekt */
 }
 
-/* 📌 Bildet */
+/* 📌 Favoritt-styling - Retter som er favoritter får en rød border */
+.favorite {
+  border: 3px solid #B22222; /* Rød kant */
+  box-shadow: 0px 4px 12px rgba(178, 34, 34, 0.3); /* Liten rød glød */
+}
+
+/* 📌 Bildet av retten */
 .dishImage {
-  width: 100px;
-  height: 100px;
-  border-radius: 10px;
-  margin-right: 20px;
-  object-fit: cover;
-  border: 3px solid #b0a084;
+  width: 100px; /* Fast bredde */
+  height: 100px; /* Fast høyde */
+  border-radius: 10px; /* Runde kanter */
+  margin-right: 20px; /* Avstand mellom bilde og tekst */
+  object-fit: cover; /* Sørger for at bildet fyller rammen */
+  border: 3px solid #b0a084; /* Gull-brun kant */
 }
 
-/* 📌 Tekst-container */
+/* 📌 Tekstcontainer for retten */
 .dishInfo {
-  flex: 1;
+  flex: 1; /* Fyller all tilgjengelig plass */
 }
 
-/* 📌 Rettsnavn */
+/* 📌 Navn på retten */
 .dishName {
-  font-family: "Playfair Display", serif;
+  font-family: "Playfair Display", serif; /* Elegant font */
   font-size: 1.6rem;
-  color: #5E503F;
+  color: #5E503F; /* Dyp brun farge */
   margin: 0 0 5px 0;
 }
 
-/* 📌 Ingredienser */
-.dishIngredients {
-  font-family: "Merriweather", serif;
+/* 📌 Beskrivelse av retten */
+.dishDescription {
+  font-family: "Merriweather", serif; /* Støttefont for brødtekst */
   font-size: 1rem;
-  color: #403D39;
+  color: #403D39; /* Mørk dempet brun */
   margin: 5px 0;
 }
 
 /* 📌 Pris og allergener */
 .dishPrice, .dishAllergens {
   font-size: 1rem;
-  color: #3D3D3D;
+  color: #3D3D3D; /* Mykere mørk grå */
   font-weight: bold;
 }
 
-/* 📌 Tilpasning for mobil */
+/* 📌 Favoritt-knapp */
+.favoriteButton {
+  background: none;
+  border: 2px solid #C49A6C; /* Gullbrun farge */
+  color: #543310;
+  font-size: 1rem;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* 📌 Favoritt-knapp: Hover-effekt */
+.favoriteButton:hover {
+  background: #C49A6C;
+  color: white;
+}
+
+/* 📌 Favoritt-knapp: Aktivert tilstand */
+.favoriteButton.active {
+  background: #B22222; /* Rød bakgrunn */
+  color: white;
+  font-weight: bold;
+}
+
+/* 📌 Responsiv tilpasning for mobil */
 @media (max-width: 768px) {
   .dishCard {
-      flex-direction: column;
+      flex-direction: column; /* Setter bildet over teksten */
       text-align: center;
       padding: 15px;
   }
 
   .dishImage {
-      width: 80px;
+      width: 80px; /* Gjør bildet litt mindre */
       height: 80px;
       margin-bottom: 10px;
   }
@@ -76,28 +107,3 @@
       font-size: 0.9rem;
   }
 }
-
-/* 📌 Favoritt-knapp */
-.favoriteButton {
-  background: none;
-  border: 2px solid #C49A6C;
-  color: #543310;
-  font-size: 1rem;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-/* 📌 Favoritt-effekter */
-.favoriteButton:hover {
-  background: #C49A6C;
-  color: white;
-}
-
-.favoriteButton.active {
-  background: #C49A6C;
-  color: white;
-  font-weight: bold;
-}
-
