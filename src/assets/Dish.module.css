@@ -8,6 +8,7 @@
   border-radius: 12px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out; /* 📌 Smooth overgang */
+  height: 320px;
 }
 
 /* 📌 Liten zoom-effekt ved hover */
@@ -18,8 +19,9 @@
 
 /* 📌 Når retten er favoritt - smooth overgang på rød border */
 .dishCard.favorite {
-  border: 3px solid #b22222; /* 📌 Rød kant */
+  /*outline: 3px solid #b22222; /* 📌 Rød kant */
   transition: all 0.4s ease-in-out; /* 📌 Smooth overgang */
+  box-shadow: 0px 0px 8px 8px red;
 }
 
 /* 📌 Bildet av retten */
@@ -133,8 +135,8 @@
 
 /* 📌 Favoritt-styling */
 .favoriteDish {
-  border: 3px solid #C49A6C; /* Gullbrun ramme for favoritter */
-  transition: border 0.3s ease-in-out;
+  outline: 3px solid #C49A6C; /* Gullbrun ramme for favoritter */
+  transition: outline 0.3s ease-in-out;
 }
 
 /* 📌 Fade inn/ut animasjon */
