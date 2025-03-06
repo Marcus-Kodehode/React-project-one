@@ -1,18 +1,19 @@
-import styles from "./assets/App.module.css";
-import Header from "./components/Header"; // 📌 Importerer Header
-import Hero from "./components/Hero"; // 📌 Importerer Hero-seksjonen
-import Menu from "./components/Menu"; // 📌 Importerer Menyen
-import Footer from "./components/Footer"; // 📌 Importerer Footer
+import styles from "./assets/App.module.css"; // 📌 Importerer globale stiler for appen
+import Header from "./components/Header"; // 📌 Importerer Header-komponenten
+import Hero from "./components/Hero"; // 📌 Importerer Hero-seksjonen (introduksjon)
+import Menu from "./components/Menu"; // 📌 Importerer Meny-komponenten
+import Footer from "./components/Footer"; // 📌 Importerer Footer-komponenten
 
+// 📌 Hovedkomponenten for applikasjonen
 function App() {
   return (
-    <div className={styles.app}>
-      <Header /> {/* 📌 Legger til header øverst */}
+    <div className={styles.app}> {/* 📌 Hovedcontainer for hele applikasjonen */}
+      <Header /> {/* 📌 Viser Header øverst på siden */}
       <Hero />   {/* 📌 Hero-seksjonen med introduksjon til restauranten */}
-      <Menu />   {/* 📌 Viser menyen */}
-      <Footer /> {/* 📌 Legger til footer nederst */}
+      <Menu />   {/* 📌 Meny-seksjonen som viser tilgjengelige retter */}
+      <Footer /> {/* 📌 Footer-seksjonen med kontaktinformasjon */}
     </div>
   );
 }
 
-export default App;
+export default App; // 📌 Eksporterer hovedkomponenten for bruk i index.js
