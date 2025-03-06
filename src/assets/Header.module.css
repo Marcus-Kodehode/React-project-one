@@ -1,74 +1,84 @@
 /* 📌 Header */
+/* Stiler for toppseksjonen (header) */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #543310;
-    color: white;
-    padding: 15px 40px;
-    font-size: 1.2rem;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex; /* Bruker flexbox for layout */
+    justify-content: space-between; /* Plasserer innholdet med plass mellom elementene */
+    align-items: center; /* Sentrerer innholdet vertikalt */
+    background: #543310; /* Setter bakgrunnsfargen til en mørkebrun nyanse */
+    color: white; /* Setter tekstfargen til hvit */
+    padding: 15px 40px; /* Legger til innvendig padding (15px topp/bunn, 40px venstre/høyre) */
+    font-size: 1.2rem; /* Setter skriftstørrelsen til 1.2rem */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Legger til en skyggeeffekt for dybde */
 }
 
 /* 📌 Logo */
+/* Beholder for logoen i headeren */
 .logoContainer {
-    display: flex;
-    align-items: center;
+    display: flex; /* Bruker flexbox for layout */
+    align-items: center; /* Sentrerer elementene vertikalt */
 }
 
 /* 📌 Logo-bilde */
+/* Stiler for selve logo-bildet */
 .logo {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
-    border-radius: 50%;
+    width: 50px; /* Setter bredden til 50px */
+    height: auto; /* Beholder original høyde for å opprettholde proporsjoner */
+    margin-right: 10px; /* Legger til 10px avstand mellom logoen og teksten */
+    border-radius: 50%; /* Gjør bildet rundt ved å sette 50% border-radius */
 }
 
 /* 📌 Tekst */
+/* Stiler for logoens tekst */
 .logoText {
-    font-family: "Playfair Display", serif;
-    font-size: 1.8rem;
-    font-weight: bold;
+    font-family: "Playfair Display", serif; /* Bruker en serif-font for elegant utseende */
+    font-size: 1.8rem; /* Setter skriftstørrelsen til 1.8rem */
+    font-weight: bold; /* Gjør teksten fet */
 }
 
 /* 📌 Navigasjon */
+/* Stiler for navigasjonsmenyen */
 .nav {
-    display: flex;
-    gap: 15px;
+    display: flex; /* Bruker flexbox for layout */
+    gap: 15px; /* Legger til 15px avstand mellom elementene i navigasjonen */
 }
 
 /* 📌 Knapp */
+/* Stiler for navigasjonsknapper */
 .nav button {
-    background-color: #C49A6C;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
+    background-color: #C49A6C; /* Setter en gyllenbrun bakgrunnsfarge */
+    color: white; /* Setter tekstfargen til hvit */
+    border: none; /* Fjerner standard kantlinje */
+    padding: 10px 15px; /* Legger til innvendig padding for bedre klikkflate */
+    font-size: 1rem; /* Setter skriftstørrelsen til 1rem */
+    font-weight: bold; /* Gjør teksten fet */
+    border-radius: 5px; /* Legger til avrundede hjørner */
+    cursor: pointer; /* Endrer musepekeren til en peker for å indikere klikkbarhet */
+    transition: background 0.3s ease-in-out; /* Legger til en overgangseffekt for bakgrunnsendring */
 }
 
 /* 📌 Hover-effekt */
+/* Stiler for knappene når musen holdes over dem */
 .nav button:hover {
-    background-color: #A07850;
+    background-color: #A07850; /* Endrer bakgrunnsfargen til en mørkere brunfarge */
 }
 
 /* 📌 Mobilversjon */
+/* Tilpasser headeren for skjermer som er mindre enn 768px brede */
 @media (max-width: 768px) {
     .header {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Endrer layout til kolonneformat */
+        text-align: center; /* Sentrerer innholdet */
     }
 
     .nav {
-        flex-direction: column;
-        gap: 5px;
+        flex-direction: column; /* Plasserer navigasjonselementene i en kolonne */
+        gap: 5px; /* Reduserer mellomrommet mellom elementene */
     }
 }
+
 /* 📌 Trykk-animasjon */
+/* Stiler for knappene når de trykkes på */
 button:active {
-    transform: scale(0.95);
-    transition: transform 0.1s ease-in-out;
+    transform: scale(0.95); /* Gjør knappen litt mindre for en trykk-effekt */
+    transition: transform 0.1s ease-in-out; /* Legger til en myk overgang for effekten */
 }

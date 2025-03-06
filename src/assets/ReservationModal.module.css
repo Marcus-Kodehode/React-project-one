@@ -1,101 +1,118 @@
 /* 📌 Modal overlay (bakgrunn) */
+/* Bakgrunn som dekker hele skjermen når modalvinduet er åpent */
 .modalOverlay {
-    position: fixed;
+    position: fixed; /* 📌 Fikser plasseringen slik at den dekker hele skjermen */
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* 📌 Mørkere bakgrunn for bedre kontrast */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
+    width: 100%; /* 📌 Full bredde */
+    height: 100%; /* 📌 Full høyde */
+    background: rgba(0, 0, 0, 0.6); /* 📌 Mørkere bakgrunn for å fremheve popup */
+    display: flex; /* 📌 Bruker flexbox for å sentrere innholdet */
+    align-items: center; /* 📌 Sentrerer vertikalt */
+    justify-content: center; /* 📌 Sentrerer horisontalt */
+    z-index: 1000; /* 📌 Sørger for at modalen ligger over alt annet innhold */
 }
 
 /* 📌 Selve popup-boksen */
+/* Container for innholdet i modalvinduet */
 .modalContent {
-    background: #fdfdfd;
-    padding: 20px;
-    width: 380px; /* 📌 Smalere bredde for mer kompakt design */
-    max-width: 90%;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    position: relative;
-    font-family: 'Playfair Display', serif;
+    background: #fdfdfd; /* 📌 Lys bakgrunn for kontrast */
+    padding: 20px; /* 📌 Gir innholdet litt luft */
+    width: 380px; /* 📌 Begrenset bredde for et kompakt design */
+    max-width: 90%; /* 📌 Sikrer at modalvinduet ikke blir for bredt på små skjermer */
+    border-radius: 12px; /* 📌 Runde hjørner for et mykere uttrykk */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* 📌 Legger til en lett skygge for dybde */
+    text-align: center; /* 📌 Sentrerer tekstinnhold */
+    position: relative; /* 📌 Gjør det enklere å plassere eventuelle interne elementer */
+    font-family: 'Playfair Display', serif; /* 📌 Elegant fontvalg */
 }
 
 /* 📌 Tittel */
+/* Stiler for tittelen inne i modalvinduet */
 .modalContent h2 {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #543310;
-    margin-bottom: 10px;
+    font-size: 1.4rem; /* 📌 Tydelig størrelse for god lesbarhet */
+    font-weight: bold; /* 📌 Gjør teksten mer fremtredende */
+    color: #543310; /* 📌 Dyp brun farge */
+    margin-bottom: 10px; /* 📌 Gir avstand under tittelen */
 }
 
 /* 📌 Tekst */
+/* Stiler for generell tekst inne i modalen */
 .modalContent p {
-    font-size: 1rem;
-    color: #403D39;
-    margin-bottom: 15px;
+    font-size: 1rem; /* 📌 Standard tekststørrelse */
+    color: #403D39; /* 📌 Dempet mørkebrun farge */
+    margin-bottom: 15px; /* 📌 Legger til avstand mellom elementene */
 }
 
 /* 📌 Inputfelt */
+/* Stiler for inputfelt inne i modalvinduet */
 .inputField {
-    width: 80%;
-    padding: 8px;
-    border: 1px solid #C49A6C;
-    border-radius: 5px;
-    font-size: 1rem;
-    margin-bottom: 15px;
-    text-align: center;
+    width: 80%; /* 📌 Gjør inputfeltet bredt for bedre brukeropplevelse */
+    padding: 8px; /* 📌 Komfortabel klikkflate */
+    border: 1px solid #C49A6C; /* 📌 Gullbrun kant */
+    border-radius: 5px; /* 📌 Runde kanter */
+    font-size: 1rem; /* 📌 Standard fontstørrelse */
+    margin-bottom: 15px; /* 📌 Avstand mellom elementene */
+    text-align: center; /* 📌 Sentrerer tekstinnhold i inputfeltet */
 }
 
 /* 📌 Knapp */
+/* Stiler for både bekreftelsesknapp og lukkeknapp */
 .confirmButton, .closeButton {
-    background: #C49A6C;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-    margin-top: 10px;
+    background: #C49A6C; /* 📌 Gullbrun farge */
+    color: white; /* 📌 Hvit tekst for kontrast */
+    padding: 10px 15px; /* 📌 Komfortabel klikkflate */
+    border: none; /* 📌 Fjerner standard kantlinje */
+    border-radius: 5px; /* 📌 Runde hjørner */
+    font-size: 1rem; /* 📌 Standard størrelse */
+    cursor: pointer; /* 📌 Indikerer at elementet er klikkbart */
+    transition: background 0.3s ease-in-out; /* 📌 Smooth overgang */
+    margin-top: 10px; /* 📌 Avstand over knappen */
 }
 
+/* 📌 Hover-effekt for knapper */
+/* Endrer bakgrunnsfarge når brukeren holder musepekeren over knappene */
 .confirmButton:hover, .closeButton:hover {
-    background: #A67C52;
+    background: #A67C52; /* 📌 Mørkere nyanse for interaktiv effekt */
 }
 
 /* 📌 Bilde */
+/* Stiler for eventuelle bilder i modalvinduet */
 .specialImage {
-    width: 100%;
-    max-width: 250px; /* 📌 Gjør bildet mindre */
-    border-radius: 8px;
-    margin-top: 15px;
-}
-.closeButton {
-    display: block;
-    margin: 15px auto 0 auto; /* 📌 Sentrerer knappen */
-    padding: 10px 20px;
-    background-color: #A67C52;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
+    width: 100%; /* 📌 Gjør at bildet fyller tilgjengelig plass */
+    max-width: 250px; /* 📌 Setter en maksgrense for å hindre for store bilder */
+    border-radius: 8px; /* 📌 Runde hjørner */
+    margin-top: 15px; /* 📌 Avstand over bildet */
 }
 
-.closeButton:hover {
-    background-color: #543310;
+/* 📌 Lukkeknapp */
+/* Ekstra styling for lukkeknappen for bedre synlighet */
+.closeButton {
+    display: block; /* 📌 Sørger for at knappen vises som en egen blokk */
+    margin: 15px auto 0 auto; /* 📌 Sentrerer knappen */
+    padding: 10px 20px; /* 📌 Justerer størrelse for bedre brukeropplevelse */
+    background-color: #A67C52; /* 📌 Mørkere brun farge */
+    color: white; /* 📌 Hvit tekst for kontrast */
+    font-size: 1rem; /* 📌 Standard størrelse */
+    font-weight: bold; /* 📌 Gjør teksten tydeligere */
+    border: none; /* 📌 Fjerner kantlinje */
+    border-radius: 5px; /* 📌 Runde hjørner */
+    cursor: pointer; /* 📌 Endrer musepekeren for klikkbarhet */
+    transition: background 0.3s ease-in-out; /* 📌 Smooth overgang */
 }
+
+/* 📌 Hover-effekt for lukkeknappen */
+/* Endrer bakgrunnsfarge når brukeren holder musepekeren over knappen */
+.closeButton:hover {
+    background-color: #543310; /* 📌 Dypere brun farge */
+}
+
+/* 📌 Spesialbilde i modalen */
+/* Styling for bilder i modalen */
 .specialImage {
-    width: 80%;
-    max-width: 300px;
-    border-radius: 10px;
-    margin-top: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%; /* 📌 Tar opp 80% av tilgjengelig bredde */
+    max-width: 300px; /* 📌 Sikrer at bildet ikke blir for stort */
+    border-radius: 10px; /* 📌 Runde hjørner */
+    margin-top: 15px; /* 📌 Legger til avstand over bildet */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 📌 Legger til en subtil skygge */
 }

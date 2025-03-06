@@ -1,135 +1,153 @@
 /* 📌 Styling for hovedtittelen */
+/* Stiler for menyens hovedtittel */
 .menuTitle {
-    font-size: 2.5rem;
-    font-family: 'Playfair Display', serif;
-    color: #5E503F;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 2.5rem; /* 📌 Stor og tydelig tittel */
+    font-family: 'Playfair Display', serif; /* 📌 Elegant fontvalg */
+    color: #5E503F; /* 📌 Dyp brun farge for varme toner */
+    font-weight: bold; /* 📌 Gjør tittelen ekstra markant */
+    text-transform: uppercase; /* 📌 Endrer teksten til store bokstaver */
+    text-align: center; /* 📌 Sentrerer teksten */
+    margin-bottom: 20px; /* 📌 Avstand under tittelen */
 }
 
 /* 📌 Hovedcontainer for menyen */
+/* Beholder som omslutter hele menyseksjonen */
 .menuContainer {
-    text-align: center;
-    padding: 40px;
-    background: #F5F1EB;
-    border-radius: 10px;
+    text-align: center; /* 📌 Sentrerer innholdet */
+    padding: 40px; /* 📌 Gir luft rundt innholdet */
+    background: #F5F1EB; /* 📌 Lys beige bakgrunn for en myk følelse */
+    border-radius: 10px; /* 📌 Runde hjørner for et moderne utseende */
 }
 
 /* 📌 Kategorititler */
+/* Stiler for overskriftene til ulike matgrupper */
 .categoryTitle {
-    font-size: 2rem;
-    font-family: 'Playfair Display', serif;
-    color: #543310;
-    text-transform: uppercase;
-    border-bottom: 3px solid #C49A6C;
-    display: inline-block;
-    padding-bottom: 5px;
-    margin-top: 30px;
+    font-size: 2rem; /* 📌 Tydelig kategorioverskrift */
+    font-family: 'Playfair Display', serif; /* 📌 Klassisk font */
+    color: #543310; /* 📌 Dyp brun farge */
+    text-transform: uppercase; /* 📌 Gjør teksten store bokstaver */
+    border-bottom: 3px solid #C49A6C; /* 📌 Legger til en strek under teksten */
+    display: inline-block; /* 📌 Gjør at streken tilpasser seg tekstbredden */
+    padding-bottom: 5px; /* 📌 Gir litt luft mellom teksten og streken */
+    margin-top: 30px; /* 📌 Skaper avstand mellom kategorier */
 }
 
 /* 📌 Grid-layout (desktop) */
+/* Bruker grid for å vise retter i to kolonner på større skjermer */
 .dishGrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
+    display: grid; /* 📌 Aktiverer grid-layout */
+    grid-template-columns: repeat(2, 1fr); /* 📌 To kolonner */
+    gap: 20px; /* 📌 Avstand mellom elementene */
+    justify-content: center; /* 📌 Sentrerer innholdet */
+    margin-top: 20px; /* 📌 Avstand over grid */
 }
 
 /* 📌 Tilpasning for nettbrett */
+/* Justerer grid-layout for skjermer under 1024px */
 @media (max-width: 1024px) {
     .dishGrid {
-        grid-template-columns: repeat(1, 1fr); /* 1 rett per rad */
-        gap: 15px;
+        grid-template-columns: repeat(1, 1fr); /* 📌 Endrer til én kolonne per rad */
+        gap: 15px; /* 📌 Mindre avstand mellom elementene */
     }
 }
 
 /* 📌 Tilpasning for mobil */
+/* Optimalisering for små skjermer */
 @media (max-width: 768px) {
     .menuContainer {
-        padding: 10px;
+        padding: 10px; /* 📌 Reduserer padding for bedre plassutnyttelse */
     }
 
     .categoryTitle {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* 📌 Justerer fontstørrelsen for mobil */
     }
 
     .dishGrid {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 10px;
+        grid-template-columns: repeat(1, 1fr); /* 📌 Beholder én rett per rad */
+        gap: 10px; /* 📌 Reduserer avstanden ytterligere */
     }
 }
 
 /* 📌 Filterknapper */
+/* Stiler for knappene som brukes til å filtrere menyen */
 .filterButtons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* 📌 Gjør knappene mer fleksible */
-    gap: 10px;
-    margin-bottom: 20px;
+    display: flex; /* 📌 Bruker flexbox */
+    justify-content: center; /* 📌 Sentrerer knappene */
+    flex-wrap: wrap; /* 📌 Tillater at knappene brytes til neste linje */
+    gap: 10px; /* 📌 Avstand mellom knappene */
+    margin-bottom: 20px; /* 📌 Avstand under knappene */
 }
 
 /* 📌 Knappestil med animasjon */
+/* Standardstil for filterknappene */
 .filterButtons button {
-    background: #C49A6C;
-    color: white;
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: #C49A6C; /* 📌 Gullbrun farge */
+    color: white; /* 📌 Hvit tekst for kontrast */
+    font-family: 'Playfair Display', serif; /* 📌 Elegant font */
+    font-size: 1rem; /* 📌 Standard knappestørrelse */
+    padding: 10px 20px; /* 📌 Komfortabel klikkflate */
+    border: none; /* 📌 Fjerner standard kantlinje */
+    border-radius: 5px; /* 📌 Runde hjørner */
+    cursor: pointer; /* 📌 Endrer musepekeren til en hånd for å indikere klikkbarhet */
+    transition: all 0.3s ease-in-out; /* 📌 Smooth overgang */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 📌 Legger til en svak skygge */
 }
 
 /* 📌 Hover-effekt med lett skygge og bevegelse */
+/* Endrer knappens utseende når brukeren holder musepekeren over */
 .filterButtons button:hover {
-    background: #A67C52;
-    transform: translateY(-2px);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    background: #A67C52; /* 📌 Mørkere nyanse */
+    transform: translateY(-2px); /* 📌 Løfter knappen litt */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* 📌 Øker skyggen */
 }
 
 /* 📌 Trykke-effekt */
+/* Reduserer størrelsen når knappen trykkes */
 .filterButtons button:active {
     transform: scale(0.95);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* 📌 Aktiv knapp */
+/* Stiler for knappen som representerer den gjeldende filtreringen */
 .activeFilter {
-    background: #543310;
-    font-weight: bold;
+    background: #543310; /* 📌 Dyp brun farge */
+    font-weight: bold; /* 📌 Gjør teksten mer markant */
 }
 
 /* 📌 Responsiv justering for knapper */
+/* Endrer filterknappene til kolonnevisning på veldig små skjermer */
 @media (max-width: 600px) {
     .filterButtons {
-        flex-direction: column;
+        flex-direction: column; /* 📌 Plasserer knappene i en vertikal liste */
     }
 
     .filterButtons button {
-        width: 100%;
-    }
-}
-/* 📌 Fade-in effekt når siden lastes */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+        width: 100%; /* 📌 Gjør knappene fullbredde */
     }
 }
 
+/* 📌 Fade-in effekt når siden lastes */
+/* Skaper en myk innlastingseffekt */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* 📌 Starter usynlig */
+        transform: translateY(10px); /* 📌 Løfter elementet litt */
+    }
+    to {
+        opacity: 1; /* 📌 Blir synlig */
+        transform: translateY(0); /* 📌 Går tilbake til sin opprinnelige posisjon */
+    }
+}
+
+/* 📌 Animasjon på meny-containeren */
+/* Anvender fade-in effekten på meny-containeren */
 .menuContainer {
     animation: fadeIn 0.8s ease-in-out; /* 📌 Gir en myk fade-in effekt */
 }
+
 /* 📌 Trykk-animasjon */
+/* Reduserer størrelsen ved klikk for en responsiv følelse */
 button:active {
     transform: scale(0.95);
     transition: transform 0.1s ease-in-out;

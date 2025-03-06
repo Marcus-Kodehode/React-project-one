@@ -1,148 +1,149 @@
 /* 📌 Container for hver rett */
 .dishCard {
-  display: flex;
-  align-items: center;
-  background: #ffffff;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 12px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out; /* 📌 Smooth overgang */
-  height: 320px;
+  display: flex; /* 📌 Plasserer bildet og teksten side ved side */
+  align-items: center; /* 📌 Sentrerer innholdet vertikalt */
+  background: #ffffff; /* 📌 Hvit bakgrunn for kontrast */
+  padding: 20px; /* 📌 Gir innholdet litt luft */
+  margin: 15px 0; /* 📌 Legger til avstand mellom rettene */
+  border-radius: 12px; /* 📌 Runde hjørner for et moderne og mykere uttrykk */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 📌 Legger til en skygge for å gi dybde */
+  transition: all 0.3s ease-in-out; /* 📌 Smooth overgang ved interaksjon */
+  height: 320px; /* 📌 Fast høyde for å sikre konsistent størrelse */
 }
 
 /* 📌 Liten zoom-effekt ved hover */
 .dishCard:hover {
-  transform: scale(1.02);
-  background: #f3f1ed;
+  transform: scale(1.02); /* 📌 Gir en subtil zoom-effekt */
+  background: #f3f1ed; /* 📌 Endrer bakgrunnsfarge ved hover */
 }
 
-/* 📌 Når retten er favoritt - smooth overgang på rød border */
+/* 📌 Når retten er favoritt - fremhever med en rød glød */
 .dishCard.favorite {
-  /*outline: 3px solid #b22222; /* 📌 Rød kant */
   transition: all 0.4s ease-in-out; /* 📌 Smooth overgang */
-  box-shadow: 0px 0px 8px 8px red;
+  box-shadow: 0px 0px 8px 8px red; /* 📌 Gir en rød glød rundt favoritter */
 }
 
 /* 📌 Bildet av retten */
 .dishImage {
-  width: 100px;
-  height: 100px;
-  border-radius: 10px;
-  margin-right: 20px;
-  object-fit: cover;
-  border: 3px solid #b0a084;
+  width: 100px; /* 📌 Setter en fast bredde */
+  height: 100px; /* 📌 Setter en fast høyde */
+  border-radius: 10px; /* 📌 Runde hjørner for et mykere design */
+  margin-right: 20px; /* 📌 Gir litt luft mellom bildet og teksten */
+  object-fit: cover; /* 📌 Hindrer bildet fra å bli strukket eller forvrengt */
+  border: 3px solid #b0a084; /* 📌 Ramme rundt bildet i en nøytral farge */
 }
 
 /* 📌 Tilpasning for mobil */
 @media (max-width: 768px) {
   .dishCard {
-      flex-direction: column;
-      text-align: center;
-      padding: 15px;
+    flex-direction: column; /* 📌 Plasserer bildet over teksten for bedre mobiltilpasning */
+    text-align: center; /* 📌 Sentrerer tekstinnhold */
+    padding: 15px; /* 📌 Justerer padding for bedre layout */
   }
-/* 📌 Liten "løft" når man hover over en rett */
-.dishCard:hover {
-  transform: translateY(-5px);
-  transition: transform 0.3s ease-in-out;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-}
 
   .dishImage {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 10px;
+    width: 80px; /* 📌 Gjør bildet mindre for små skjermer */
+    height: 80px;
+    margin-bottom: 10px; /* 📌 Legger til avstand under bildet */
   }
 
   .dishName {
-      font-size: 1.2rem;
+    font-size: 1.2rem; /* 📌 Justerer fontstørrelsen for bedre lesbarhet */
   }
 
   .dishPrice, .dishIngredients, .dishAllergens {
-      font-size: 0.9rem;
+    font-size: 0.9rem; /* 📌 Reduserer tekststørrelsen for å passe mobilvisning */
   }
-} 
+}
+
+/* 📌 Liten "løft" når man hover over en rett */
+.dishCard:hover {
+  transform: translateY(-5px); /* 📌 Løfter kortet litt for en interaktiv følelse */
+  transition: transform 0.3s ease-in-out; /* 📌 Smooth overgang */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* 📌 Gir en litt sterkere skyggeeffekt */
+}
 
 /* 📌 Container for tekst-informasjonen om retten */
 .dishInfo {
-  flex: 1;
+  flex: 1; /* 📌 Sikrer at teksten tar opp tilgjengelig plass */
 }
 
 /* 📌 Styling for navnet på retten */
 .dishName {
-  font-family: "Playfair Display", serif;
-  font-size: 1.6rem;
-  color: #5E503F;
-  margin: 0 0 5px 0;
+  font-family: "Playfair Display", serif; /* 📌 Elegant fontvalg */
+  font-size: 1.6rem; /* 📌 Størrelse på teksten */
+  color: #5E503F; /* 📌 Dyp brun farge for en varm følelse */
+  margin: 0 0 5px 0; /* 📌 Legger til litt avstand under */
 }
 
 /* 📌 Styling for beskrivelsen av retten */
 .dishDescription {
-  font-family: "Merriweather", serif;
-  font-size: 1rem;
-  color: #403D39;
-  margin: 5px 0;
+  font-family: "Merriweather", serif; /* 📌 Støttefont for brødtekst */
+  font-size: 1rem; /* 📌 Standard fontstørrelse */
+  color: #403D39; /* 📌 Mørk dempet brun for behagelig lesing */
+  margin: 5px 0; /* 📌 Avstand mellom beskrivelse og andre elementer */
 }
 
 /* 📌 Styling for pris og allergener */
 .dishPrice, .dishAllergens {
-  font-size: 1rem;
-  color: #3D3D3D;
-  font-weight: bold;
+  font-size: 1rem; /* 📌 Standard størrelse */
+  color: #3D3D3D; /* 📌 Mykere mørk grå for tydelig lesbarhet */
+  font-weight: bold; /* 📌 Gjør teksten litt mer markert */
 }
 
-/* 📌 Favoritt-knapp - smooth overgang */
+/* 📌 Favoritt-knapp - designet for enkel interaksjon */
 .favoriteButton {
-  background: none;
-  border: 2px solid #C49A6C;
-  color: #543310;
+  background: none; /* 📌 Gjør bakgrunnen gjennomsiktig */
+  border: 2px solid #C49A6C; /* 📌 Gullbrun farge for en elegant touch */
+  color: #543310; /* 📌 Mørk brun for kontrast */
   font-size: 1rem;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 8px;
+  padding: 8px 12px; /* 📌 Komfortabel klikkflate */
+  cursor: pointer; /* 📌 Endrer musepekeren for klikkbarhet */
+  border-radius: 8px; /* 📌 Runde kanter for et moderne uttrykk */
   transition: all 0.3s ease-in-out; /* 📌 Smooth overgang */
 }
 
 /* 📌 Hover-effekt */
 .favoriteButton:hover {
-  background: #C49A6C;
-  color: white;
+  background: #C49A6C; /* 📌 Endrer bakgrunnsfarge for en interaktiv effekt */
+  color: white; /* 📌 Endrer tekstfarge for kontrast */
 }
 
 /* 📌 Endrer farge når retten er favoritt */
 .favoriteButton.active {
-  background: #b22222;
+  background: #b22222; /* 📌 Rød bakgrunn for å indikere favoritt */
   color: white;
   border-color: #b22222;
   font-weight: bold;
   transition: all 0.3s ease-in-out; /* 📌 Smooth overgang */
 }
-/* 📌 Favoritt-pop-up */
+
+/* 📌 Favoritt-pop-up melding */
 .popup {
   position: absolute;
-  top: -30px;
+  top: -30px; /* 📌 Plasserer meldingen over kortet */
   left: 50%;
-  transform: translateX(-50%);
-  background: #C49A6C; /* Gullbrun */
-  color: white;
-  padding: 8px 15px;
-  border-radius: 5px;
-  font-size: 0.9rem;
+  transform: translateX(-50%); /* 📌 Sentrerer pop-up */
+  background: #C49A6C; /* 📌 Gullbrun bakgrunn */
+  color: white; /* 📌 Hvit tekst for kontrast */
+  padding: 8px 15px; /* 📌 Gir innholdet litt luft */
+  border-radius: 5px; /* 📌 Runde hjørner */
+  font-size: 0.9rem; /* 📌 Mindre tekst for en diskré melding */
   font-weight: bold;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  animation: fadeInOut 2s ease-in-out;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 📌 Skyggeeffekt */
+  animation: fadeInOut 2s ease-in-out; /* 📌 Animasjon for fading */
 }
 
 /* 📌 Favoritt-styling */
 .favoriteDish {
-  outline: 3px solid #C49A6C; /* Gullbrun ramme for favoritter */
+  outline: 3px solid #C49A6C; /* 📌 Gullbrun ramme for å fremheve favoritter */
   transition: outline 0.3s ease-in-out;
 }
 
 /* 📌 Fade inn/ut animasjon */
 @keyframes fadeInOut {
-  0% { opacity: 0; transform: translateY(-10px); }
-  20% { opacity: 1; transform: translateY(0); }
-  80% { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(-10px); }
+  0% { opacity: 0; transform: translateY(-10px); } /* 📌 Start: Usynlig og litt hevet */
+  20% { opacity: 1; transform: translateY(0); } /* 📌 Fader inn */
+  80% { opacity: 1; transform: translateY(0); } /* 📌 Holder seg synlig */
+  100% { opacity: 0; transform: translateY(-10px); } /* 📌 Fader ut og beveger seg opp */
 }

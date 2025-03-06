@@ -1,38 +1,43 @@
 /* 📌 Footer */
+/* Stiler for bunnteksten (footer) */
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #543310;
-    color: white;
-    padding: 15px 40px;
-    font-size: 1rem;
-    margin-top: 40px;
+    display: flex; /* Bruker flexbox for layout */
+    justify-content: space-between; /* Fordeler elementene jevnt med plass mellom */
+    align-items: center; /* Sentrerer innholdet vertikalt */
+    background: #543310; /* Setter bakgrunnsfargen til en mørkebrun nyanse */
+    color: white; /* Setter tekstfargen til hvit */
+    padding: 15px 40px; /* Legger til innvendig padding (15px topp/bunn, 40px venstre/høyre) */
+    font-size: 1rem; /* Setter skriftstørrelsen til 1rem */
+    margin-top: 40px; /* Legger til avstand på 40px over footeren */
 }
 
 /* 📌 Kontaktinfo */
+/* Stiler for kontaktinformasjon i footeren */
 .contactInfo p {
-    margin: 5px 0;
+    margin: 5px 0; /* Legger til 5px topp- og bunnmarg for avstand mellom tekstlinjene */
 }
 
 /* 📌 Footer-logo */
+/* Beholder for logoen i footeren */
 .logoFooter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex; /* Bruker flexbox for layout */
+    flex-direction: column; /* Plasserer innhold i en kolonne */
+    align-items: center; /* Sentrerer innholdet horisontalt */
 }
 
 /* 📌 Footer-logo */
+/* Stil for selve logo-bildet i footeren */
 .footerLogo {
-    width: 50px;
-    height: auto;
-    margin-bottom: 5px;
-    border-radius: 50%;
+    width: 50px; /* Setter bredden til 50px */
+    height: auto; /* Beholder original høyde for å opprettholde proporsjoner */
+    margin-bottom: 5px; /* Legger til 5px avstand under logoen */
+    border-radius: 50%; /* Gjør bildet rundt ved å sette 50% border-radius */
 }
 
 /* 📌 Trademark */
+/* Stiler for varemerketeksten (f.eks. © 2024 Bedrift) */
 .trademark {
-    font-size: 0.9rem;
-    text-align: right;
+    font-size: 0.9rem; /* Setter en litt mindre skriftstørrelse enn standard */
+    text-align: right; /* Justerer teksten til høyre */
 }
 

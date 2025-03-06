@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "../assets/Dish.module.css";
 
-// 📌 Definerer allergen-emojis
+// 📌 Definerer allergen-emojis for å gjøre allergener mer visuelle
 const allergenIcons = {
   Shellfish: "🦐",
   Fish: "🐟",
@@ -12,47 +12,53 @@ const allergenIcons = {
   Mustard: "🌿",
 };
 
+// 📌 Komponent for å vise en enkelt rett
 function Dish({ id, title, price, ingredients, allergens, image }) {
-  const [isFavorite, setIsFavorite] = useState(false);
-  const [showPopup, setShowPopup] = useState(false); // 📌 Styrer popup-vinduet
+  const [isFavorite, setIsFavorite] = useState(false); // 📌 State for å spore favorittstatus
+  const [showPopup, setShowPopup] = useState(false); // 📌 State for å kontrollere popup-visning
 
-  // 📌 Henter lagrede favoritter fra localStorage ved lasting av siden
+  // 📌 Henter lagrede favoritter fra localStorage når komponenten lastes
   useEffect(() => {
     const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    setIsFavorite(savedFavorites.includes(id)); 
-  }, [id]);
+    setIsFavorite(savedFavorites.includes(id)); // 📌 Sjekker om retten er en favoritt
+  }, [id]); // 📌 Kjøres kun når id endres
 
   // 📌 Funksjon for å legge til/fjerne favoritter
   const toggleFavorite = () => {
     let savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
     if (!Array.isArray(savedFavorites)) {
-      savedFavorites = []; // 📌 Sikrer at det er en array
+      savedFavorites = []; // 📌 Sikrer at det er en array hvis dataen er korrupt
     }
 
     let updatedFavorites;
     if (isFavorite) {
-      updatedFavorites = savedFavorites.filter((favId) => favId !== id);
+      updatedFavorites = savedFavorites.filter((favId) => favId !== id); // 📌 Fjerner retten fra favoritter
     } else {
-      updatedFavorites = [...savedFavorites, id];
+      updatedFavorites = [...savedFavorites, id]; // 📌 Legger til retten i favoritter
     }
 
     // 📌 Lagre oppdatert favoritt-liste i localStorage
     localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-    setIsFavorite(!isFavorite);
+    setIsFavorite(!isFavorite); // 📌 Oppdaterer state
 
-    // 📌 Viser pop-up når favoritt legges til/fjernes
+    // 📌 Viser pop-up når retten legges til/fjernes fra favoritter
     setShowPopup(true);
     setTimeout(() => setShowPopup(false), 2000); // 📌 Skjuler pop-up etter 2 sekunder
   };
 
   return (
     <div className={`${styles.dishCard} ${isFavorite ? styles.favoriteDish : ""}`}>
+      {/* 📌 Viser bilde av retten */}
       <img src={image} alt={title} className={styles.dishImage} />
+      
+      {/* 📌 Inneholder all informasjon om retten */}
       <div className={styles.dishInfo}>
-        <h3 className={styles.dishName}>{title}</h3>
-        <p className={styles.dishPrice}><strong>Price:</strong> {price}</p>
-        <p className={styles.dishIngredients}><strong>Ingredients:</strong> {ingredients}</p>
+        <h3 className={styles.dishName}>{title}</h3> {/* 📌 Navnet på retten */}
+        <p className={styles.dishPrice}><strong>Price:</strong> {price}</p> {/* 📌 Prisvisning */}
+        <p className={styles.dishIngredients}><strong>Ingredients:</strong> {ingredients}</p> {/* 📌 Ingredienser */}
+
+        {/* 📌 Viser allergener hvis det finnes noen */}
         {allergens.length > 0 && (
           <p className={styles.dishAllergens}>
             <strong>Allergens:</strong>{" "}
@@ -68,7 +74,7 @@ function Dish({ id, title, price, ingredients, allergens, image }) {
           {isFavorite ? "❤️ Remove Favorite" : "🤍 Add Favorite"}
         </button>
 
-        {/* 📌 Pop-up melding for favoritt */}
+        {/* 📌 Pop-up melding for favorittstatus */}
         {showPopup && (
           <div className={styles.popup}>
             {isFavorite ? "Added to Favorites! ❤️" : "Removed from Favorites! 🤍"}

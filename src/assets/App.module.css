@@ -1,55 +1,56 @@
-/* 📌 Importerer fontene */
+/* 📌 Importerer fontene fra Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap');
 
-*   {
-    /* margin:0;
-    padding:0; */
+* {
+    /* 📌 Sikrer at elementers størrelse beregnes riktig */
+    /* margin og padding er utkommentert – kan fjernes eller aktiveres om ønskelig */
     box-sizing: border-box;
 }
 
-/* 📌 Generelle stiler */
+/* 📌 Generelle stiler for hele siden */
 body {
-    background-color: #F7F3EC; /* Myk kremhvit */
-    font-family: 'Source Sans Pro', sans-serif; /* Standard brødtekst */
-    color: #2C2A28; /* Mørk brungrå tekst */
-    margin: 0;
-    padding: 0;
+    background-color: #F7F3EC; /* 📌 Myk kremhvit bakgrunn for en elegant følelse */
+    font-family: 'Source Sans Pro', sans-serif; /* 📌 Standard brødtekstfont */
+    color: #2C2A28; /* 📌 Mørk brungrå farge for lesbarhet */
+    margin: 0; /* 📌 Fjerner standard margin */
+    padding: 0; /* 📌 Fjerner standard padding */
     display: flex;
-    justify-content: center;
+    justify-content: center; /* 📌 Sentrerer innholdet horisontalt */
 }
 
-/* 📌 Hovedcontainer */
+/* 📌 Hovedcontainer for innholdet */
 .app {
-    max-width: 1100px;
-    padding: 40px;
-    text-align: center;
-    background: #FDFBF7; /* Varm hvit bakgrunn */
-    border-radius: 12px;
-    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.1);
+    max-width: 1100px; /* 📌 Setter en maksimal bredde for å unngå for brede linjer */
+    padding: 40px; /* 📌 Gir luft rundt innholdet */
+    text-align: center; /* 📌 Sentrerer alt innhold inni .app */
+    background: #FDFBF7; /* 📌 En varm hvit bakgrunn for et sofistikert uttrykk */
+    border-radius: 12px; /* 📌 Myke avrundede hjørner for moderne design */
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.1); /* 📌 Myk skygge for dybdeeffekt */
 }
 
-/* 📌 Importerer den nye fonten */
+/* 📌 Importerer en ekstra font for spesifikke elementer */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap');
 
-/* 📌 Hovedtittel-styling */
+/* 📌 Styling for hovedtittelen */
 .mainTitle {
-    font-family: "Cormorant Garamond", serif; /* 📌 Elegant og klassisk font */
-    font-size: 3.5rem; /* 📌 Gjør tittelen litt større */
-    color: #543310; /* 📌 Dyp brunfarge */
+    font-family: "Cormorant Garamond", serif; /* 📌 Klassisk og elegant serif-font */
+    font-size: 3.5rem; /* 📌 Størrelse for å gjøre tittelen dominerende */
+    color: #543310; /* 📌 Dyp brunfarge som matcher temaet */
     text-align: center; /* 📌 Sentrerer tittelen */
-    text-transform: uppercase; /* 📌 Store bokstaver for en luksuriøs følelse */
-    font-weight: 700; /* 📌 Gjør den litt kraftigere */
-    margin-bottom: 20px; /* 📌 Luft under tittelen */
-    position: relative;
+    text-transform: uppercase; /* 📌 Gjør all tekst i tittelen til store bokstaver */
+    font-weight: 700; /* 📌 Øker tykkelsen for en sterk visuell effekt */
+    margin-bottom: 20px; /* 📌 Gir litt luft under tittelen */
+    position: relative; /* 📌 Muliggjør posisjonering av pseudo-elementer */
 }
 
 /* 📌 Dekorativ linje under tittelen */
 .mainTitle::after {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 4px;
-    background: #C49A6C; /* 📌 Gullbrun linje */
-    margin: 10px auto 0;
-    border-radius: 2px;
+    content: ""; /* 📌 Legger til en dekorativ linje */
+    display: block; /* 📌 Gjør at linjen tar opp plass */
+    width: 100px; /* 📌 Bestemmer bredden på linjen */
+    height: 4px; /* 📌 Setter høyden på linjen */
+    background: #C49A6C; /* 📌 Gullbrun farge for en luksuriøs følelse */
+    margin: 10px auto 0; /* 📌 Sentrerer linjen under tittelen */
+    border-radius: 2px; /* 📌 Gjør linjen litt avrundet */
 }
+

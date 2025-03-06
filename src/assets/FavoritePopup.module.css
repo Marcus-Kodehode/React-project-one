@@ -1,25 +1,25 @@
 /* 📌 Favoritt-popup styling */
 .popup {
-    position: fixed;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #C49A6C; /* 📌 Gullbrun farge */
-    color: white;
-    padding: 12px 20px;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    animation: fadeInOut 2s ease-in-out;
+    position: fixed; /* 📌 Fikser posisjonen slik at den ikke påvirkes av scrolling */
+    bottom: 50px; /* 📌 Plasserer pop-up’en 50px fra bunnen av skjermen */
+    left: 50%; /* 📌 Sentrerer pop-up’en horisontalt */
+    transform: translateX(-50%); /* 📌 Justerer posisjonen for perfekt sentrering */
+    background: #C49A6C; /* 📌 Gullbrun bakgrunnsfarge for premium uttrykk */
+    color: white; /* 📌 Hvit tekst for god kontrast */
+    padding: 12px 20px; /* 📌 Gir innholdet litt plass for bedre lesbarhet */
+    border-radius: 10px; /* 📌 Runde hjørner for et mykere design */
+    font-size: 1rem; /* 📌 Standard tekststørrelse for tydelig lesbarhet */
+    font-family: 'Playfair Display', serif; /* 📌 Elegant fontvalg */
+    font-weight: bold; /* 📌 Gjør teksten mer fremtredende */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 📌 Legger til en subtil skygge for dybde */
+    opacity: 0; /* 📌 Starter usynlig før animasjonen begynner */
+    animation: fadeInOut 2s ease-in-out; /* 📌 Bruker fade-in/fade-out animasjon */
 }
 
 /* 📌 Fade-in / fade-out animasjon */
 @keyframes fadeInOut {
-    0% { opacity: 0; transform: translateY(10px); }
-    10% { opacity: 1; transform: translateY(0); }
-    90% { opacity: 1; transform: translateY(0); }
-    100% { opacity: 0; transform: translateY(-10px); }
+    0% { opacity: 0; transform: translateY(10px); } /* 📌 Starter skjult og litt nedenfor */
+    10% { opacity: 1; transform: translateY(0); } /* 📌 Fader inn og flytter til sin posisjon */
+    90% { opacity: 1; transform: translateY(0); } /* 📌 Holder seg synlig en stund */
+    100% { opacity: 0; transform: translateY(-10px); } /* 📌 Fader ut og flytter seg litt opp */
 }

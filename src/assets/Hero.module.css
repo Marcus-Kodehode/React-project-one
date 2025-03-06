@@ -1,115 +1,128 @@
 /* 📌 Hero-seksjon (bakgrunnsbilde) */
+/* Seksjon som viser et stort bakgrunnsbilde med overlegg og tekst */
 .hero {
-    position: relative;
-    width: 100%;
-    height: 80vh; /* 📌 Justerer høyden */
-    background: url("/images/hoved2.webp") center/cover no-repeat; /* 📌 Bakgrunnsbilde */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+    position: relative; /* 📌 Plasserer elementet relativt for å kunne posisjonere overlay */
+    width: 100%; /* 📌 Full bredde */
+    height: 80vh; /* 📌 Høyde satt til 80% av skjermhøyden */
+    background: url("/images/hoved2.webp") center/cover no-repeat; /* 📌 Setter et bakgrunnsbilde som dekker hele seksjonen */
+    display: flex; /* 📌 Bruker flexbox for sentrering */
+    align-items: center; /* 📌 Sentrerer innholdet vertikalt */
+    justify-content: center; /* 📌 Sentrerer innholdet horisontalt */
+    text-align: center; /* 📌 Sentrerer tekst */
+    color: white; /* 📌 Hvit tekst for kontrast */
 }
 
 /* 📌 Overlegg for bedre lesbarhet */
+/* Semi-transparent lag som mørkner bakgrunnen for bedre lesbarhet */
 .overlay {
-    position: absolute;
+    position: absolute; /* 📌 Plasseres absolutt i forhold til .hero */
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100%; /* 📌 Dekker hele seksjonen */
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* 📌 Mørkt gjennomsiktig filter */
+    background: rgba(0, 0, 0, 0.4); /* 📌 Mørk bakgrunn med 40% gjennomsiktighet */
 }
 
 /* 📌 Tekstinnhold */
+/* Container for teksten i hero-seksjonen */
 .heroContent {
-    max-width: 800px;
-    text-align: center;
-    color: #ffffff;
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-    background: rgba(0, 0, 0, 0.6); /* 📌 Bedre kontrast for lesbarhet */
-    padding: 30px;
-    border-radius: 15px;
-    line-height: 1.7;
+    max-width: 800px; /* 📌 Begrenser bredden for bedre lesbarhet */
+    text-align: center; /* 📌 Sentrerer tekstinnhold */
+    color: #ffffff; /* 📌 Hvit tekst */
+    font-family: 'Playfair Display', serif; /* 📌 Elegant fontvalg */
+    font-weight: bold; /* 📌 Gjør teksten fet */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* 📌 Gir en subtil skygge for bedre kontrast */
+    background: rgba(0, 0, 0, 0.6); /* 📌 Legger til en mørk bakgrunn bak teksten for å øke kontrasten */
+    padding: 30px; /* 📌 Gir luft rundt teksten */
+    border-radius: 15px; /* 📌 Runde hjørner for et mykere uttrykk */
+    line-height: 1.7; /* 📌 Øker linjehøyden for bedre lesbarhet */
 }
 
 /* 📌 Bedre knappedesign */
+/* Stiler for hovedknappen i hero-seksjonen */
 .heroButton {
-    background-color: #C49A6C;
-    color: white;
-    font-size: 1.2rem;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #C49A6C; /* 📌 Gullbrun farge */
+    color: white; /* 📌 Hvit tekst for kontrast */
+    font-size: 1.2rem; /* 📌 Gjør teksten større */
+    padding: 12px 24px; /* 📌 Øker klikkbarheten */
+    border: none; /* 📌 Fjerner standard kantlinje */
+    border-radius: 8px; /* 📌 Runde hjørner */
+    cursor: pointer; /* 📌 Endrer musepekeren til en hånd for å indikere klikkbarhet */
+    transition: all 0.3s ease-in-out; /* 📌 Legger til en smooth overgangseffekt */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 📌 Gir en svak skygge */
 }
 
+/* 📌 Hover-effekt for knappen */
+/* Gir en lett animasjon når brukeren holder musen over knappen */
 .heroButton:hover {
-    background-color: #A67C52;
-    transform: translateY(-2px);
+    background-color: #A67C52; /* 📌 Mørkere gullbrun */
+    transform: translateY(-2px); /* 📌 Løfter knappen litt for interaktiv følelse */
 }
-
 
 /* 📌 Responsiv tilpasning */
+/* Tilpasser tekstboksen for mindre skjermer */
 @media (max-width: 768px) {
     .heroContent {
-        max-width: 90%;
-        padding: 20px;
+        max-width: 90%; /* 📌 Gjør innholdet bredere for å utnytte plass */
+        padding: 20px; /* 📌 Reduserer padding for bedre plassbruk */
     }
 }
 
-
 /* 📌 Tittel */
+/* Stiler for hovedtittelen */
 .heroContent h1 {
-    font-size: 3rem;
-    font-family: "Playfair Display", serif;
-    margin-bottom: 10px;
+    font-size: 3rem; /* 📌 Stor og tydelig tittel */
+    font-family: "Playfair Display", serif; /* 📌 Elegant font */
+    margin-bottom: 10px; /* 📌 Litt avstand under tittelen */
 }
 
 /* 📌 Beskrivelse */
+/* Stiler for beskrivelsesteksten */
 .heroContent p {
-    font-size: 1.2rem;
-    font-family: "Merriweather", serif;
-    line-height: 1.6;
+    font-size: 1.2rem; /* 📌 God lesbar størrelse */
+    font-family: "Merriweather", serif; /* 📌 Mer behagelig font for avsnitt */
+    line-height: 1.6; /* 📌 Øker linjehøyden for bedre lesbarhet */
 }
 
 /* 📌 CTA-knapp */
+/* Stiler for Call-To-Action knappen */
 .ctaButton {
-    margin-top: 20px;
-    padding: 12px 24px;
-    font-size: 1.2rem;
-    font-family: "Playfair Display", serif;
-    color: white;
-    background: #C49A6C; /* 📌 Gullbrun */
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    margin-top: 20px; /* 📌 Gir avstand over knappen */
+    padding: 12px 24px; /* 📌 Komfortabel klikkflate */
+    font-size: 1.2rem; /* 📌 Tydelig størrelse */
+    font-family: "Playfair Display", serif; /* 📌 Samme font som hovedtekst */
+    color: white; /* 📌 Hvit tekst */
+    background: #C49A6C; /* 📌 Gullbrun farge */
+    border: none; /* 📌 Fjerner kantlinje */
+    border-radius: 8px; /* 📌 Runde kanter */
+    cursor: pointer; /* 📌 Indikerer klikkbarhet */
+    transition: all 0.3s ease; /* 📌 Legger til animasjonseffekt */
 }
 
 /* 📌 Hover-effekt */
+/* Gir CTA-knappen en lett animasjon ved hover */
 .ctaButton:hover {
-    background: #A67C52; /* 📌 Mørkere gullbrun */
-    transform: scale(1.05);
+    background: #A67C52; /* 📌 Mørkere gullbrun for interaktiv effekt */
+    transform: scale(1.05); /* 📌 Øker størrelsen litt for en dynamisk effekt */
 }
 
 /* 📌 Mobilvennlig justering */
+/* Tilpasninger for mindre skjermer */
 @media (max-width: 768px) {
     .hero {
-        height: 60vh;
+        height: 60vh; /* 📌 Reduserer høyden på hero-seksjonen for bedre mobiltilpasning */
     }
+
     .heroContent h1 {
-        font-size: 2rem;
+        font-size: 2rem; /* 📌 Reduserer størrelsen på tittelen */
     }
+
     .heroContent p {
-        font-size: 1rem;
+        font-size: 1rem; /* 📌 Mindre skriftstørrelse for bedre mobilvisning */
     }
+
     .ctaButton {
-        font-size: 1rem;
-        padding: 10px 20px;
+        font-size: 1rem; /* 📌 Justerer knappestørrelsen */
+        padding: 10px 20px; /* 📌 Justerer padding for bedre plassutnyttelse */
     }
 }
